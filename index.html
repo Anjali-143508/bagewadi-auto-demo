@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagewadi Auto Service Center | Independent Two-Wheeler Workshop Belagavi</title>
+    <meta name="description" content="Independent motorcycle service workshop in Tilakwadi, Belagavi. Reliable two-wheeler repairs near Paratha Corner, Congress Road. Call +91 72046 91338.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Local SEO Structured Data (Updated with Specific Address) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MotorcycleRepair",
+      "name": "Bagewadi Auto Service Center",
+      "image": "https://images.unsplash.com/photo-1558981403-c5f91cbba527?auto=format&fit=crop&q=80&w=800",
+      "telephone": "+917204691338",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Corner Congress Road, RGP2 273, Tilakwadi, near Paratha Corner, Shivaji Colony",
+        "addressLocality": "Belagavi",
+        "addressRegion": "Karnataka",
+        "postalCode": "590006",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 15.8427,
+        "longitude": 74.5042
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --charcoal: #121212;
+            --dark-grey: #1f1f1f;
+            --orange: #FF6B00;
+            --white: #ffffff;
+            --light-grey: #f8f8f8;
+            --muted: #666666;
+            --border: #e1e1e1;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--charcoal); background-color: var(--white); scroll-behavior: smooth; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: -0.5px; }
+
+        /* --- Components --- */
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; border-radius: 4px; font-weight: 700; text-decoration: none; transition: var(--transition); cursor: pointer; border: none; font-size: 0.9rem; text-transform: uppercase; }
+        .btn-primary { background-color: var(--orange); color: var(--white); }
+        .btn-primary:hover { background-color: #e66000; transform: translateY(-2px); }
+        .btn-secondary { background-color: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-secondary:hover { background-color: var(--white); color: var(--charcoal); }
+        .btn-outline { border: 2px solid var(--orange); color: var(--charcoal); background: transparent; padding: 10px 20px; }
+        .btn-outline:hover { background: var(--orange); color: white; }
+
+        /* --- Layout --- */
+        .section { padding: 90px 20px; max-width: 1200px; margin: 0 auto; }
+        .bg-light { background-color: var(--light-grey); }
+        .bg-dark { background-color: var(--charcoal); color: var(--white); }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { font-size: 2.2rem; margin-bottom: 15px; }
+        .underline { width: 60px; height: 5px; background: var(--orange); margin: 0 auto; }
+
+        /* --- Header --- */
+        header { position: sticky; top: 0; background: rgba(18, 18, 18, 0.98); backdrop-filter: blur(10px); z-index: 1000; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { color: var(--white); font-weight: 800; font-size: 1.2rem; text-decoration: none; }
+        .logo span { color: var(--orange); }
+        .call-now-nav { background: var(--orange); color: white; padding: 8px 16px; border-radius: 4px; font-weight: 700; text-decoration: none; font-size: 0.85rem; }
+
+        /* --- Hero --- */
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558981403-c5f91cbba527?auto=format&fit=crop&q=80&w=1200'); background-size: cover; background-position: center; height: 80vh; display: flex; align-items: center; text-align: center; color: var(--white); padding: 0 20px; }
+        .hero-content { max-width: 850px; margin: 0 auto; }
+        .hero h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 35px; opacity: 0.95; }
+        .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+
+        /* --- About Section --- */
+        .about-text { max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; color: var(--muted); }
+
+        /* --- Services Grid --- */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .service-card { background: var(--white); border: 1px solid var(--border); padding: 40px; border-radius: 8px; transition: var(--transition); position: relative; display: flex; flex-direction: column; min-height: 380px; }
+        .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow); border-color: var(--orange); }
+        .verify-tag { position: absolute; top: 15px; right: -30px; background: #FFD700; color: #000; font-size: 0.6rem; font-weight: 800; padding: 5px 35px; transform: rotate(45deg); z-index: 1; }
+        .service-icon { width: 50px; height: 50px; background: rgba(255, 107, 0, 0.1); display: flex; align-items: center; justify-content: center; border-radius: 8px; margin-bottom: 25px; }
+        .service-icon svg { width: 28px; height: 28px; fill: var(--orange); }
+        .service-card h3 { font-size: 1.3rem; margin-bottom: 15px; }
+        .service-card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 25px; flex-grow: 1; }
+
+        /* --- Process Steps --- */
+        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 40px; }
+        .step { text-align: center; }
+        .step-number { font-size: 3.5rem; font-weight: 800; color: rgba(255,107,0,0.2); line-height: 1; }
+
+        /* --- Contact & Hours --- */
+        .contact-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; }
+        .info-item { margin-bottom: 30px; }
+        .info-item label { display: block; font-weight: 700; color: var(--orange); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 5px; }
+        .info-item p { font-size: 1.1rem; }
+        .hours-box { background: var(--dark-grey); color: white; padding: 30px; border-radius: 8px; margin-top: 20px; border-left: 5px solid var(--orange); }
+        .map-frame { width: 100%; height: 450px; border-radius: 8px; border: none; background: #eee; }
+
+        /* --- CTA & Footer --- */
+        .final-cta { text-align: center; padding: 100px 20px; background: var(--orange); color: var(--white); }
+        footer { background: #000; color: #888; padding: 60px 20px; text-align: center; border-top: 1px solid #222; }
+        .footer-links { margin-bottom: 20px; }
+        .footer-links a { color: #888; text-decoration: none; margin: 0 15px; font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            .contact-container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+            .nav-container { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">BAGEWADI <span>AUTO</span></a>
+            <a href="tel:+917204691338" class="call-now-nav">Call: +91 72046 91338</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bagewadi Auto Service Center</h1>
+            <p>Independent Automobile Service Workshop in Tilakwadi, Belagavi. Providing dedicated care for your motorcycle and two-wheeler.</p>
+            <div class="hero-btns">
+                <a href="tel:+917204691338" class="btn btn-primary">Call for Enquiries</a>
+                <a href="https://www.google.com/maps/search/Bagewadi+Auto+Service+Center+Tilakwadi+Belagavi" target="_blank" class="btn btn-secondary">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW ABOUT SECTION -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Local Workshop Identity</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-text">
+            <p>Bagewadi Auto Service Center is a dedicated independent automobile service workshop serving the Tilakwadi community in Belagavi. We focus on providing local two-wheeler owners with a reliable destination for maintenance and repair enquiries.</p>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION (MARKED FOR OWNER REVIEW) -->
+    <section class="section bg-light" id="services">
+        <div class="section-header">
+            <h2>Potential Services</h2>
+            <div class="underline"></div>
+            <p style="margin-top:15px; color:#666;">Contact our workshop to confirm availability for the following services.</p>
+        </div>
+
+        <div class="services-grid">
+            <article class="service-card">
+                <div class="verify-tag">OWNER REVIEW</div>
+                <div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22,15V17H19V19H17V17H11V19H9V17H6V15H5V11L8,5H16L19,11V15H22M15.5,11L13.5,7H10.5L8.5,11H15.5Z"/></svg>
+                    </div>
+                    <h3>General Servicing</h3>
+                    <p>Routine maintenance and comprehensive two-wheeler servicing to ensure vehicle longevity.</p>
+                </div>
+                <a href="tel:+917204691338" class="btn btn-outline">Check Availability</a>
+            </article>
+
+            <article class="service-card">
+                <div class="verify-tag">OWNER REVIEW</div>
+                <div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7,15H9V17H7V15M11,15H13V17H11V15M15,15H17V17H15V15M19,11L16,5H8L5,11V15H6V19H8V17H16V19H18V15H19V11M15.5,11H8.5L10.5,7H13.5L15.5,11Z"/></svg>
+                    </div>
+                    <h3>Mechanical Repairs</h3>
+                    <p>Enquire about technical mechanical repairs and component replacements for your motorcycle.</p>
+                </div>
+                <a href="tel:+917204691338" class="btn btn-outline">Check Availability</a>
+            </article>
+
+            <article class="service-card">
+                <div class="verify-tag">OWNER REVIEW</div>
+                <div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z"/></svg>
+                    </div>
+                    <h3>Brake & Suspension</h3>
+                    <p>Enquire about essential safety checks including brake adjustments and suspension maintenance.</p>
+                </div>
+                <a href="tel:+917204691338" class="btn btn-outline">Check Availability</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="section bg-dark">
+        <div class="section-header">
+            <h2 style="color:white">Your Visit</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>Connect</h3>
+                <p>Call our Tilakwadi workshop to discuss your vehicle's current needs.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Confirm</h3>
+                <p>Enquire about availability and receive an estimate based on your specific requirements.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>Visit</h3>
+                <p>Bring your vehicle to our Shivaji Colony location for professional assessment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & HOURS SECTION -->
+    <section class="section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="section-header" style="text-align: left;">
+                    <h2>Find the Workshop</h2>
+                    <div class="underline" style="margin: 0;"></div>
+                </div>
+                
+                <div class="info-item">
+                    <label>Address</label>
+                    <p>Corner Congress Road, RGP2 273, Tilakwadi,<br>Shivaji Colony, Belagavi, Karnataka 590006</p>
+                </div>
+
+                <div class="info-item">
+                    <label>Landmark</label>
+                    <p>Near Paratha Corner</p>
+                </div>
+
+                <div class="info-item">
+                    <label>Contact Number</label>
+                    <p><a href="tel:+917204691338" style="color: inherit; text-decoration: none;">+91 72046 91338</a></p>
+                </div>
+                
+                <div class="hours-box">
+                    <label style="color:var(--orange); font-size: 0.7rem; letter-spacing: 1px;">Operating Hours</label>
+                    <p class="hours-status" style="margin-top:5px;">Please contact the workshop to confirm current opening hours.</p>
+                </div>
+
+                <a href="https://www.google.com/maps/search/Bagewadi+Auto+Service+Center+Tilakwadi+Belagavi" target="_blank" class="btn btn-primary" style="width:100%; margin-top: 30px;">Get Directions</a>
+            </div>
+            <div class="contact-map">
+                <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.2716164287413!2d74.502!3d15.8427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDUwJzMzLjciTiA3NMKwMzAnMDcuMiJF!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="final-cta">
+        <h2>Enquire About Your Service</h2>
+        <p>Contact our team to discuss your two-wheeler's maintenance needs and confirm our current workshop availability.</p>
+        <div class="hero-btns">
+            <a href="tel:+917204691338" class="btn btn-secondary">Call Workshop</a>
+            <a href="https://wa.me/917204691338" target="_blank" class="btn btn-primary" style="background: #25D366; border:none;">WhatsApp Enquiry</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="https://www.google.com/maps/search/Bagewadi+Auto+Service+Center+Tilakwadi+Belagavi" target="_blank">Google Maps</a>
+        </div>
+        <p>&copy; 2023 Bagewadi Auto Service Center. Independent Automobile Service Workshop.</p>
+        <p style="font-size: 0.7rem; opacity: 0.6; margin-top: 15px;">Located in Tilakwadi, Belagavi. All services and hours are subject to owner confirmation.</p>
+    </footer>
+
+</body>
+</html>
